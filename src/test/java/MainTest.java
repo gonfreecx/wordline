@@ -19,12 +19,23 @@ import static org.junit.Assert.assertTrue;
         list.add(new ArrayList<>(Arrays.asList(420,42,423)));
     }
 
+
+     /**
+      * Get the private method compare using Reflection to access to the method
+      * @return the method itself
+      * @throws NoSuchMethodException
+      */
     private Method getCompare() throws NoSuchMethodException {
         Method method = Main.class.getDeclaredMethod("compare", String.class, String.class);
         method.setAccessible(true);
         return method;
     }
 
+     /**
+      * Get the private method getLargestNumber using Reflection to access to the method
+      * @return the method itself
+      * @throws NoSuchMethodException
+      */
     private Method getLargestNumber() throws NoSuchMethodException {
         Method method = Main.class.getDeclaredMethod("getLargestNumber", List.class);
         method.setAccessible(true);

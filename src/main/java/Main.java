@@ -8,7 +8,7 @@ public class Main {
      * Sort the list of Integer using our custom compare and then map it into a list of String
      * then we loop to concatenate into a single string
      * @param list
-     * @return
+     * @return the result of a String which concatenate every element of the string list
      */
     private static String getLargestNumber(List<Integer> list){
         list.sort((a,b) -> compare(String.valueOf(a),String.valueOf(b)));
@@ -26,7 +26,7 @@ public class Main {
      * we inversed the compareTo because we want to sort by the greatest to leatest (we could have reversed the list too)
      * @param a
      * @param b
-     * @return
+     * @return a Int value negative if ab is greater then ba, 0 if the ab equals ba and a positive value if ba is greater then ab
      */
     private static Integer compare(String a, String b){
         String ab = a+b;
